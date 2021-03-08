@@ -1,0 +1,445 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!--xmlns="http://www.w3.org/1999/xhtml"-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} e-Wallet {% endblock  %}</title>
+	<!-- BOOTSTRAP STYLES-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+     <!-- FONTAWESOME STYLES-->
+    <link  rel="stylesheet" href="{% static 'css/font-awesome.css' %}" />
+        <!-- CUSTOM STYLES-->
+    <link  rel="stylesheet" href="{% static 'css/custom.css' %}" />
+     <!-- GOOGLE FONTS-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+</head>
+<body>
+
+    <div id="wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="adjust-nav">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% url 'mainmenu' %}"><i class="fa fa-square-o "></i>&nbsp;eWallet</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{% url 'logout' %}">Cerrar Sesion</a></li>
+                        <li><a href="#">Editar Perfil</a></li>
+                        <li><a href="#">Acerca de Nosotros</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li class="text-center user-image-back">
+                        <img src="{% static 'img/logo.jpeg' %}" class="img-responsive" />
+                     
+                    </li>
+
+
+                    <li>
+                        <a href="{% url 'cuenta' %}"><i class="fa fa-desktop "></i> Mis Cuentas</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#"><i class="fa fa-table "></i>Tarjetas</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit "></i>Elementos<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">Notificaciones</a>
+                            </li>
+                            <li>
+                                <a href="#">Inversiones</a>
+                            </li>
+                            <li>
+                                <a href="#">Empresas</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit "></i>Seguros </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap "></i>Multi-Servicios<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">Tipo de Cambio</a>
+                            </li>
+                            <li>
+                                <a href="#">Transferencias al Exterior</a>
+                            </li>
+                            <li>
+                                <a href="#">Transferencias Nacionales<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Interbancarias Diferidas</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Interbancarias Inmediatas</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Giros Nacionales</a>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-qrcode "></i>Panel de Beneficios</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o"></i>Graficos/Balance de Bolsa</a>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-edit "></i>Zona Online </a>
+                    </li>
+                    <li>
+                        <a href="blank.html"><i class="fa fa-table "></i>Pagina en Blanco</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+    </div>
+    
+       
+    {% block content %}
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Beneficios eWallet</h2>
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+                <hr />
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <h5>¡Es Seguro!</h5>
+                        <div class="panel panel-primary text-center no-boder bg-color-blue">
+                            <div class="panel-body">
+                               <i class="">
+                                    <img alt="Mejora la seguridad online de tu empresa - Google Actívate" class="n3VNCb" data-noaft="1" jsaction="load:XAeZkd;" jsname="HiaYvf" src="https://lh3.googleusercontent.com/ESDr-glwzmLrtw4f6tt5uR98KIVCxptlKYH5BeEf-tAHMZYQUwpXONGhJ_B1Ty8TzQYRRGYqce3Z7gmUEh5lOwLAdAd3vna47K9oHA" style="width: 116px; height: 90px; margin: 0px;" /><br />
+                                </i>&nbsp;<p dir="ltr">Evita entrar en contacto con efectivo manipulado por otros</p>
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <h5>¡Es Rapido!</h5>
+                        <div class="alert alert-info text-center">
+                            <i class="">
+                                <img alt="Icono De Transferencia Rápida De Dinero, Estilo De Esquema Ilustración del  Vector - Ilustración de estilo, icono: 166121736" class="n3VNCb" data-noaft="1" jsaction="load:XAeZkd;" jsname="HiaYvf" src="https://thumbs.dreamstime.com/b/icono-de-transferencia-rápida-dinero-estilo-esquema-vector-para-diseño-web-aislado-en-fondo-blanco-166121736.jpg" style="width: 124px; height: 80px; margin: 0px;" /><br />
+                            </i>&nbsp;<p dir="ltr">Olvidate de las largas colas y numeros de cuenta. Transfiere rapido y fácil</p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Preguntas Frecuentes</h5>
+                        <a href="#" class="btn btn-default">¿Como me registro?</a>
+                        <a href="#" class="btn btn-primary">¿Como lo uso?</a>
+                        <a href="#" class="btn btn-danger">¿Como usar el codigo QR?</a>
+                        <a href="#" class="btn btn-success">¿Como puedo ver mi saldo?</a>
+                        <a href="#" class="btn btn-info">¿Como retiro efectivo?</a>
+                        <a href="#" class="btn btn-warning">¿Como recupero mi contraseña/pin token?</a>
+                        <br />
+                        <br />
+                        <h5>Progreso Actual</h5>
+                        <div class="progress progress-striped">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <span class="sr-only">20% Complete (success)</span>
+                            </div>
+                        </div>
+                        <div class="progress progress-striped active">
+                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                <span class="sr-only"80% Complete</span>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <!-- /. ROW  -->
+                <hr />
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>¡Conversa con Nosotros!</label>
+                            <input class="form-control" />
+                            <p class="help-block">Si necesitas mas informacion.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="help-block">Click para visitar nuestra pagina en blanco</p>
+                        <a href="blank.html" target="_blank" class="btn btn-danger btn-lg btn-block">Pagina en Blanco</a>
+                    </div>
+                    <div class="col-md-4">
+                        Descarga e-Wallet Móvil. <a href=""i>Descarga aqui</a> <p class="help-block">Realiza Operaciones desde tu celular.</p> <img src="{% static 'img/e-wallet.png' %}" class="img-responsive" />
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                     <div class="col-md-12">
+                        <h5>Contigo en tus Planes</h5>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#Digitalmente" data-toggle="tab">Digitalmente</a>
+                            </li>
+                            <li class=""><a href="#Planes" data-toggle="tab">Planes</a>
+                            </li>
+                            <li class=""><a href="#FinanzasPersonales" data-toggle="tab">Finanzas Personales</a>
+                            </li>
+                            <li class=""><a href="#MisProductos" data-toggle="tab">Mis Productos</a>
+                            </li>
+                            <li class=""><a href="#Portuseguridad" data-toggle="tab">Por tu seguridad</a>
+                            </li>
+                            <li class=""><a href="#Contigoe-wallet" data-toggle="tab">Contigo e-wallet</a>
+                            </li>
+
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade active in" id="Digitalmente">
+                                <h4>Descubre el nuevo buscador de eWallet</h4>
+                                <p>
+                                   ¿Cómo usar el Buscador de Glosas?
+                                </p>
+                                <p>
+                                    Para usar el Buscador de Glosas tienes dos opciones:
+                                </p>
+                                <p>
+                                    -Escribir la Glosa tal como aparece en el estado de cuenta de tu tarjeta. Recuerda que el buscador NO autocompletará la glosa que escribas.
+                                </p>
+                                <p>
+                                    -Dar clic en la flecha que se encuentra al lado derecho del buscador y seleccionar la Glosa deseada.
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="Planes">
+                                <h4>7 Consejos para ahorrar dinero en tu empresa</h4>
+                                <p>
+                                    El principal objetivo de una empresa está en lograr más dinero sin gastar mucho. Y la forma de ahorrar sin afectar la calidad, es mejorar el rendimiento operativo. Es decir, tener más ingresos y beneficios.
+                                </p>
+                                <p>
+                                    1. Controla y planifica.
+                                </p>
+                                 <p>
+                                    2. Gasta solo lo necesario.
+                                </p>
+                                 <p>
+                                    3. Desarrolla una gestión de cobranza.<a href=""i>Ver más.</a>
+                                </p>
+                                 <p>
+                                    4. Evalúa a tus proveedores.
+                                </p>
+                                 <p>
+                                    5. Enfócate en hacer crecer tu cartera de clientes.
+                                </p>
+                                 <p>
+                                    6. Automatiza procesos.<a href=""i>Ver más.</a>
+                                </p>
+                                 <p>
+                                    7. Terceriza o contrata colaboradores "Freelance". <a href=""i>Ver más.</a>
+                                </p>
+
+                            </div>
+                            <div class="tab-pane fade" id="FinanzasPersonales">
+                                <h4>Aprende a administrar el dinero en pareja</h4>
+                                <p >
+                                   
+                                </p>
+
+                            </div>
+                            <div class="tab-pane fade" id="MisProductos">
+                                <h4>Clave de internet eWallet: Para que me sirve y como puedo crearla</h4>
+                                <p >
+                                   
+                                </p>
+
+                            </div>
+                            <div class="tab-pane fade" id="Portuseguridad">
+                                <h4>¿Como realizar compras seguras por internet?</h4>
+                                <p >
+                                    
+                                </p>
+
+                            </div>
+                            <div class="tab-pane fade" id="Contigoe-wallet">
+                                <h4>Nuestros planes han cambiado, pero no nuestro propósito de transformar planes en realidad</h4>
+                                <p >
+                                   
+                                </p>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+      
+                </div>
+                <!-- /. ROW  -->
+                <hr />
+                <div class="row">
+                    <div class="col-md-7">
+                        <h5>¿Que ofrecemos?</h5>
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">Hasta 70% en descuentos</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse" style="height: auto;">
+                                    <div class="panel-body">
+                                        En cientos de restaurantes, bares y en las mejores marcas.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed">Sorteos, experiencias y beneficios exclusivos</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" style="height: auto;">
+                                    <div class="panel-body">
+                                        Por ser parte del programa de beneficios eWallet.
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">Programa de beneficios de Cuenta sueldo</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" style="height: auto;">
+                                  
+
+                                        <div class="panel-body">
+                                             Descarga nuestra app de beneficios y disfruta lo que tenemos para ti <a href=""i>Descarga aqui</a>.
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h5>¿Necesitas Ayuda?</h5>
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFourt" class="collapsed">Escríbenos</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFourt" class="panel-collapse collapse" style="height: auto;">
+                                    <div class="panel-body">
+                                        Si tienes algún reclamo déjalo <a href="" i>aquí</a> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" class="collapsed">Llámanos</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFive" class="panel-collapse collapse" style="height: auto;">
+                                    <div class="panel-body">
+                                        (01) 311-9898
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>
+                    <div class="col-md-5">
+                        <h5>Nuestros Clientes Dicen</h5>
+                        <table class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    
+                                    <th>Clientes</th>
+                                   
+                                    <th>Comentario</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    
+                                    <td>Mark Armas</td>
+                                    
+                                    <td>Buenisimo!</td>
+                                </tr>
+                                <tr>
+                                    
+                                    <td>Jacob Thorsen</td>
+                                    
+                                    <td>La mejor plataforma</td>
+                                </tr>
+                                <tr>
+                                    
+                                    <td>Jesus Neyra</td>
+
+                                    <td>Cambio mi vida</td>
+                                </tr>
+                                <tr>
+                                    
+                                    <td>Larry Galdos</td>
+                                    
+                                    <td>la mejor Billetera virtual</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+     
+                </div>
+               
+                <!-- /. ROW  -->
+                <hr />
+                  <div class="row">
+                    <div class="col-md-12">
+                        <h5>Footer</h5>
+                            JEJE <a href="" target="_blank" >FREE BITCOIN</a>&nbsp;
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+   {% endblock %}  
+    <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="{% static 'js/jquery-1.10.2.js' %}"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="{% static 'js/jquery.metisMenu.js' %}"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="{% static 'js/custom.js' %}"></script>
+
+ 
+</body>
+</html>

@@ -1,0 +1,71 @@
+{% extends 'index.html' %}
+
+{% block title %}
+Cuentas eWallet
+{% endblock %}
+
+{% block div %}
+{% endblock %}
+{% block content %}
+<div id="page-wrapper"> 
+    <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12" style="text">
+                        <h2>RETIRO</h2> 
+                    </div>
+                </div>
+                <hr />
+                <form method="POST">
+
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="num_cuenta" class="txt_negrita">Numero de Cuenta:</label>
+                                {{form.num_cuenta}}
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="banco" class="txt_negrita">Tipo de Banco:</label>
+                                {{form.banco}}  
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="monto" class="txt_negrita">Monto:</label>
+                                {{form.monto}}  
+                            </div>
+                        </div>
+                    </div>
+                    
+                  
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="nomtitular" class="txt_negrita">Nombre de Titular:</label>
+                                {{form.nomtitular}}
+                            </div>
+                        </div>
+                    </div>
+  
+                     
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                 <button type="submit" class="btn btn-primary">Enviar</button>    
+                            </div>
+                        </div>
+                    </div> 
+                </form>
+        
+                <hr />
+
+    </div>
+</div> 
+{%endblock%}
+
