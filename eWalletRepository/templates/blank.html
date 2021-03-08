@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+
+{% block title %}
+Blank eWallet
+{% endblock %}
+
+{% block div %}
+{% endblock %}
+{% block content %}
+
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="Usuarios">Correo:</label>
+                <input class="form-control" type="text" name="correo">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="Usuarios">Contraseña:</label>
+                <input class="form-control" type="password" name="contraseña">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="form-group">
+                <a href="#">Olvidé mi contraseña</a>
+                <button type="submit">Login</button>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+{% endblock %}

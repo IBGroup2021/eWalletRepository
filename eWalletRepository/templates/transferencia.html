@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+
+{% block title %}
+Cuentas eWallet
+{% endblock %}
+
+{% block div %}
+{% endblock %}
+{% block content %}
+<!-- /. NAV SIDE  -->
+<div id="page-wrapper" >
+    <div id="page-inner">
+            <div class="row">
+                <div class="col-md-12">
+                        <h5>Desea Transferir ah:</h5>
+                    <hr />
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                            <!-- <label for="">Numero de Cuenta</label>
+                            <input type="text" name="num">
+                            <label for="">Monto</label>
+                            <input type="text" name="mont"> -->
+                            <button type="submit">Transferir</button>
+                    </form>
+                </div>
+            </div>
+    </div> 
+</div>            
+{%endblock%}           
